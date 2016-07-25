@@ -1,4 +1,4 @@
-class graph:
+class Graph:
 	def __init__(self,ver,edg):
 		self.noOfVertices=ver
 		self.noOfEdges=edg
@@ -11,10 +11,10 @@ class graph:
 		self.edges[v2].append(v1)
 
 	def doesPathExist(self,v1,v2):
-		if v2 in self.edges[v1]:
+		if v2 in self.edges[v1][1:]:
 			return 1
 		else:
-			for v in self.edges[v1]:
+			for v in self.edges[v1][1:]:
 				if not self.edges[v][0]:
 					self.edges[v][0]=True
 					if self.doesPathExist(v,v2)==1:
@@ -23,11 +23,13 @@ class graph:
 			return 0
 
 spec=raw_input()
-g=graph(int(spec[0]),int(spec[-1]))
+spec=spec.split(' ')
+g=Graph(int(spec[0]),int(spec[1]))
 for e in range(g.noOfEdges):
 	input=raw_input()
+	input=input.split(' ')
 	i=int(input[0])
-	j=int(input[-1])
+	j=int(input[1])
 	g.addEdges(i,j)
 
 path=raw_input()
