@@ -1,4 +1,4 @@
-class graph:
+class Graph:
 	def __init__(self,ver,edg):
 		self.noOfVertices=ver
 		self.noOfEdges=edg
@@ -28,11 +28,13 @@ class graph:
 				self.explore(v,count)
 
 spec=raw_input()
-g=graph(int(spec[0]),int(spec[-1]))
+spec=spec.split(' ')
+g=Graph(int(spec[0]),int(spec[1]))
 for e in range(g.noOfEdges):
 	input=raw_input()
+	input=input.split(' ')
 	i=int(input[0])
-	j=int(input[-1])
+	j=int(input[1])
 	g.addEdges(i,j)
 	
 print g.getConnectedComponents()
