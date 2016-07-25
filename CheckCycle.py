@@ -1,4 +1,4 @@
-class graph:
+class Graph:
 	def __init__(self,ver,edg):
 		self.noOfVertices=ver
 		self.noOfEdges=edg
@@ -43,7 +43,7 @@ class graph:
 
 spec=raw_input()
 spec=spec.split(' ')
-g=graph(int(spec[0]),int(spec[1]))
+g=Graph(int(spec[0]),int(spec[1]))
 for e in range(g.noOfEdges):
 	input=raw_input()
 	input=input.split(' ')
