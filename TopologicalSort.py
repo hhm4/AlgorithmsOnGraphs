@@ -1,4 +1,4 @@
-class graph:
+class Graph:
 	def __init__(self,ver,edg):
 		self.noOfVertices=ver
 		self.noOfEdges=edg
@@ -27,14 +27,14 @@ class graph:
 				self.dfs(ver)
 
 		if len(self.edges[v])<2:
-					self.topologicalOrder.append(v)
-					for i in self.indegree[v]:
-						self.edges[i].remove(v)
-					self.indegree[v]=[]
+			self.topologicalOrder.append(v)
+			for i in self.indegree[v]:
+				self.edges[i].remove(v)
+			self.indegree[v]=[]
 
 spec=raw_input()
 spec=spec.split(' ')
-g=graph(int(spec[0]),int(spec[1]))
+g=Graph(int(spec[0]),int(spec[1]))
 for e in range(g.noOfEdges):
 	input=raw_input()
 	input=input.split(' ')
