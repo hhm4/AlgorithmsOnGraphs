@@ -2,19 +2,19 @@
 This repository contains the solutions for the assignments given in Coursera - Algorithms On Graphs
 
 ##Assignment I
-###Problem I:
+###Problem I
  PathExists.py
-###Problem II:
+###Problem II
  ConnectedComponents.py
 
 ##Assignment II
-###Problem I:
+###Problem I
  CheckCycle.py
-###Problem II:
+###Problem II
  TopologicalSort.py
-###Problem III:
+###Problem III
  StronglyConnecntedComponents.py
 
 ##Assignment III
-###Problem I:
+###Problem I
  MinimumNumberOfEdges.py
