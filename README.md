@@ -2,8 +2,7 @@
 This repository contains the solutions for the assignments given in Coursera - Algorithms On Graphs
 
 ##Assignment I
-###Problem I
- PathExists.py
+###Problem I ### PathExists.py
 ###Problem II
  ConnectedComponents.py
 
