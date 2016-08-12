@@ -18,3 +18,5 @@ This repository contains the solutions for the assignments given in Coursera - A
 ##Assignment III
 ###Problem I
  MinimumNumberOfEdges.py
+###Problem II
+ BipartiteGraph.py
