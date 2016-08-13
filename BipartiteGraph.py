@@ -6,9 +6,11 @@ class Graph:
 		self.bipartite=True
 		self.edges=[]
 		self.vertexColors=[]
+		self.discovered=[]
 		for i in range(ver+1):
 			self.edges.append([])
 			self.vertexColors.append(0)
+			self.discovered.append(False)
 	
 	def colorVertices(self):
 		for v in range(1,self.noOfVertices+1):
@@ -35,12 +37,15 @@ class Graph:
 					self.bipartite=False
 					break;
 
+		self.discovered[ver]=True
+
 		if self.bipartite:
 			for e in self.edges[ver]:
-				if self.vertexColors[e]==1:
-					self.colorEdges(e,2)
-				else:
-					self.colorEdges(e,1)
+				if not self.discovered[e]:
+					if self.vertexColors[e]==1:
+						self.colorEdges(e,2)
+					else:
+						self.colorEdges(e,1)
 
 
 
@@ -51,6 +56,7 @@ for i in range(1,g.noOfEdges+1):
 	edge=raw_input()
 	edge=edge.split(' ')
 	g.edges[int(edge[0])].append(int(edge[1]))
+	g.edges[int(edge[1])].append(int(edge[0]))
 
 g.colorVertices()
 if g.bipartite:
